@@ -1,38 +1,170 @@
-.App {
+.App{
+  display: flex;
+  justify-content: center;
+}
+.Wrapper {
   text-align: center;
+  position: absolute;
+  width: 431px;
+  height: 874px;
+  background: #FCF9F9;
 }
 
-.App-logo {
-  height: 40vmin;
+/* MENU CSS -------------------------- */
+.Menu ul{
+  text-align: right;
+  margin-left: auto;  
+  margin-right: 15px;
+  padding-top: 15px;
+}
+.Menu ul li{
+  display: inline;
+  list-style-type: none;
+}
+.Menu ul li a{
+  text-align: center;
+  text-decoration: none;
+  /* font-style: normal; */
+  font-weight: 550;
+  font-size: 12px;
+  line-height: 14px;
+  color: #0A0A0A;
+  margin-left: 5px;
+}
+
+/* HEADER CSS -------------------------- */
+.Header_Wrapper{
+  position: relative; 
+  width: 100%;
+  height: 338px;
+  margin: 0px;
+  margin-top: -16px;
+  padding:0px;
+}
+.Header_Wrapper::before{
+  content: "";
+  position: absolute;
+  background-image: url(./Images/background.png);
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+  opacity: 0.3;
   pointer-events: none;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.Header{
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  flex: 0;
+  flex-direction: row;
+  justify-content:space-between;
+  height: 115px;
+  margin-top: 80px;
+  margin-left: 15px;
+}
+.item{
+  align-self: center;
+}
+.arrows {
+  margin-top: 20px;
+  cursor: pointer;
+}
+.item1{
+ 
+  flex-grow: 1;
+  width: 0%;
+}
+.item2{
+  text-align:left;
+  width: 0%;
+  flex-grow: 3;
+}
+.item3{
+  flex-grow: 1;
+  width: 0%;
+}
+.Header_Content h3{
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 16px;
+}
+.Header_Content p{
+  font-size: 10px;
+  line-height: 11px;
+  color: #534F4F;
+}
+.Header_Content button{
+  width: 90px;
+  height: 23px;
+  border: 1px solid #C10303;
+  box-sizing: border-box;
+  border-radius: 15px;
+  font-size: 12px;
+  line-height: 14px;
+  color: #000000;
+  padding:5px;
+  cursor: pointer;
 }
 
-.App-link {
-  color: #61dafb;
-}
+/* BODY CSS -------------------------- */
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.Body_Wrapper{
+  width: 100%;
+  display: flex;
+  padding-top: 70px;
+}
+.Text_Section{
+  width: 50%;
+  height: 230px;
+}
+.Text_Section h2{
+  font-family: Roboto Mono;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 32px;
+  /* identical to box height */
+  color: #000000;
+  text-align: center;
+}
+.Text_Section p{
+  font-style: normal;
+font-weight: 300;
+font-size: 14px;
+line-height: 16px;
+letter-spacing: 0.05em;
+
+color: #000000;
+}
+.Image_Section{
+  display: inline-flex;
+  width: 50%;
+  height: 230px;
+  padding-left: 30px;
+}
+.Image{
+  border-radius: 8px;
+  background-image: url(../src/Images/offset_comp_772626-opt1.png);
+  width: 48px;
+  height: 190PX;
+  background-size:cover;
+  margin-right: 8px;
+  /* position: absolute; */
+  /* top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px; */
+}
+.Image1{
+  align-self: flex-start;
+}
+.Image2{
+  align-self: center;
+}
+.Image3{
+  align-self: flex-end;
 }
